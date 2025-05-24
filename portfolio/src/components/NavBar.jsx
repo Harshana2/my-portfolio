@@ -1,21 +1,26 @@
 import React from "react";
+import logo from "../assets/logo.png";
 
 const NavBar = () => {
   return (
-    <div>
-      <div className="bg-blue-400 h-16 p-4 text-xl text-blue-950">
-        <ul className="flex justify-end space-x-6">
+    <div className="bg-yellow-50 h-16 px-6 text-xl text-black font-bold">
+      <div className="flex justify-between items-center h-full">
+        <img src={logo} alt="Logo" className="w-40 h-auto" />
+        <ul className="flex space-x-6">
           <li>
-            <a href="#home">Home</a>
+            <a href="#about" className="hover:text-gray-600">
+              About Me
+            </a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#projects" className="hover:text-gray-600">
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" className="hover:text-gray-600">
+              Contact
+            </a>
           </li>
         </ul>
       </div>
