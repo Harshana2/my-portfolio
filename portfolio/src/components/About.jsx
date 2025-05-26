@@ -31,7 +31,7 @@ const About = () => {
       </div>
 
       {/* Right Side */}
-      <div className="w-1/2 bg-gradient-to-b from-purple-300 to-purple-900 flex items-center justify-center relative">
+      <div className="w-1/2 bg-gradient-to-b from-purple-600 to-purple-900 flex items-center justify-center relative">
         <img
           src={myPhoto}
           alt="Photographer"
