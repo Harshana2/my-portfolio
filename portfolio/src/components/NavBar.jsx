@@ -1,37 +1,31 @@
-import React from "react";
-import logo from "../assets/logo.png";
+import React, { useState, useEffect } from "react";
+import { RiMoonLine, RiSunLine } from "react-icons/ri";
+import Logo from "../assets/logo.png";
 
 const NavBar = () => {
-  return (
-    <div className="flex h-16 text-xl font-bold">
-      {/* Left half - Black (centered logo) */}
-      <div className="w-1/2 bg-black text-white flex items-center justify-center">
-        <img
-          src={logo}
-          alt="logo"
-          className="w-40 h-40 object-contain rounded-full filter invert"
-        />
-      </div>
+  const [isDark, setIsDark] = useState(
+    document.documentElement.classList.contains("dark")
+  );
 
-      {/* Right half - Purple (centered nav list) */}
-      <div className="w-1/2 bg-purple-700 text-white flex items-center justify-center">
-        <ul className="flex space-x-12">
-          <li>
-            <a href="#about" className="hover:text-gray-300">
-              About Me
-            </a>
-          </li>
-          <li>
-            <a href="#projects" className="hover:text-gray-300">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-gray-300">
-              Contact
-            </a>
-          </li>
-        </ul>
+  const toggleDarkMode = () => {
+    document.documentElement.classList.toggle("dark");
+    setIsDark(!isDark);
+  };
+
+  return (
+    <div className="h-16 w-full bg-white dark:bg-[#0e0e0e] text-black dark:text-white pt-1.5 shadow-md">
+      <div className="max-w-7xl mx-auto px-45 h-full flex justify-between items-center">
+        <img
+          src={Logo}
+          alt="Logo"
+          className="h-40 w-40 transition-all dark:invert "
+        />
+        <button
+          onClick={toggleDarkMode}
+          className="text-2xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+        >
+          {isDark ? <RiSunLine /> : <RiMoonLine />}
+        </button>
       </div>
     </div>
   );
