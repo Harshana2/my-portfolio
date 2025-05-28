@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import CustomCursor from "./components/CustomCursor";
 import Skills from "./components/Skills";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Skills />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 };

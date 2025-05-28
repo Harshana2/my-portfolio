@@ -7,4 +7,5 @@
 body {
   font-family: 'Inter', sans-serif;
   cursor: none;
+   @apply bg-white dark:bg-[#0e0e0e] transition-colors duration-300;
 }
