@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import CustomCursor from "./components/CustomCursor";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
+import Education from "./components/Education";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <NavBar />
       <Hero />
       <About />
+      <Education />
       <Skills />
       <Projects />
       <Contact />

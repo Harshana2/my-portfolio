@@ -1,20 +1,25 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const CustomCursor = () => {
   const dotRef = useRef(null);
   const circleRef = useRef(null);
+  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
+    // Check screen width
+    const isMobile = window.innerWidth <= 640; // Tailwind's "sm" breakpoint is 640px
+    if (isMobile) {
+      setShowCursor(false);
+      return;
+    }
+
     const moveCursor = (e) => {
       const { clientX, clientY } = e;
 
       if (dotRef.current && circleRef.current) {
-        // Dot - instant move
         dotRef.current.style.transform = `translate(${clientX - 4}px, ${
           clientY - 4
         }px)`;
-
-        // Circle - smooth trailing
         circleRef.current.style.transform = `translate(${clientX - 12}px, ${
           clientY - 12
         }px)`;
@@ -24,6 +29,8 @@ const CustomCursor = () => {
     document.addEventListener("mousemove", moveCursor);
     return () => document.removeEventListener("mousemove", moveCursor);
   }, []);
+
+  if (!showCursor) return null;
 
   return (
     <>

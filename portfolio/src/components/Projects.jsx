@@ -10,12 +10,20 @@ const projects = [
     index: "01",
   },
   {
+    title: "Portfolio Website",
+    github: "https://github.com/Harshana2/my-portfolio",
+    description:
+      "A modern, responsive portfolio website built with React and Tailwind CSS to showcase personal projects, about myself, and technical skills. The site includes smooth section-based navigation, light/dark mode toggling, reusable components, and a contact form with real-time validation. Designed for optimal performance and accessibility across devices, it highlights a clean UI and developer-centric aesthetic.",
+    technologies: ["ReactJS", "TailwindCSS", "Vite"],
+    index: "02",
+  },
+  {
     title: "Bank Management System",
     github: "https://github.com/Harshana2/Bank-Management-System",
     description:
       "A basic bank management system was developed to demonstrate core object-oriented programming (OOP) principles. The application features a simple graphical user interface and supports account management.",
     technologies: ["Java"],
-    index: "02",
+    index: "03",
   },
   {
     title: "TaskMate",
@@ -23,7 +31,7 @@ const projects = [
     description:
       "A task management application was developed to streamline task organization and tracking. The system includes full CRUD functionality for creating, updating, deleting, and retrieving tasks.",
     technologies: ["C#", "MySQL"],
-    index: "03",
+    index: "04",
   },
   {
     title: "Toyota Clone",
@@ -31,7 +39,7 @@ const projects = [
     description:
       "A RESTful API backend was developed to support scalable and efficient data handling for web applications. The system offers complete CRUD operations and is designed for seamless integration.",
     technologies: ["Spring Boot", "MySQL"],
-    index: "04",
+    index: "05",
   },
 ];
 
