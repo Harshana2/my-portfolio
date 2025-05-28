@@ -19,10 +19,9 @@ const AboutMe = () => {
         <div className="text-center md:text-left max-w-xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-            I'm a passionate developer with a keen interest in Android and Web
-            Development. Currently expanding my knowledge in Data Structures and
-            Algorithms, I enjoy crafting seamless user experiences and solving
-            complex problems with clean code.
+            I'm a Full Stack Engineer who enjoys building responsive user
+            interfaces and powerful backend systems. I’m passionate about clean
+            code, scalable solutions, and continuous learning.
           </p>
           {/* Resume Button */}
           <a
