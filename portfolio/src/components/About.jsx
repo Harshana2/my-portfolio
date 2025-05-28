@@ -1,45 +1,41 @@
 import React from "react";
-import myPhoto from "../assets/me.png";
+import { FaArrowRight } from "react-icons/fa";
+import myPhoto from "../assets/me.png"; // Ensure the image path is correct
 
-const About = () => {
+const AboutMe = () => {
   return (
-    <div className="flex h-screen overflow-hidden">
-      {/* Left Side */}
-      <div className="w-1/2 bg-[#0f0f0f] text-white px-16 flex flex-col justify-center">
-        <h4 className="text-lg mb-2">Hello, I am</h4>
-        <h1 className="text-5xl font-bold mb-4">Harshana Karunarathne</h1>
-        <p className="text-gray-400 mb-8 max-w-md">
-          I'm a passionate Full-Stack Engineer who loves turning ideas into
-          meaningful digital experiences. I enjoy solving complex problems,
-          building intuitive solutions, and continuously growing through new
-          challenges. My goal is to create impactful technology that makes a
-          difference.
-        </p>
-        <div className="flex space-x-4">
+    <section className="h-screen bg-white dark:bg-[#0e0e0e] text-black dark:text-white px-4 sm:px-6 lg:px-[45px]">
+      <div className="max-w-7xl mx-auto h-full flex flex-col md:flex-row items-center justify-center gap-12">
+        {/* Profile Image */}
+        <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-gray-300 dark:border-gray-700 shadow-lg">
+          <img
+            src={myPhoto}
+            alt="Harshana Karunarathne"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Text Content */}
+        <div className="text-center md:text-left max-w-xl">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">About Me</h2>
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+            I'm a passionate developer with a keen interest in Android and Web
+            Development. Currently expanding my knowledge in Data Structures and
+            Algorithms, I enjoy crafting seamless user experiences and solving
+            complex problems with clean code.
+          </p>
+          {/* Resume Button */}
           <a
             href="/HarshanaCV.pdf"
             download
-            className="border border-purple-500 text-white px-6 py-2 rounded hover:bg-purple-500 transition inline-block"
+            className="inline-flex items-center px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-medium rounded-full transition duration-300 hover:opacity-90"
           >
-            Download CV
+            My Resume <FaArrowRight className="ml-2" />
           </a>
-
-          <button className="bg-purple-600 text-white px-4 py-2 rounded-full text-lg">
-            ▶
-          </button>
         </div>
       </div>
-
-      {/* Right Side */}
-      <div className="w-1/2 bg-gradient-to-b from-purple-600 to-purple-900 flex items-center justify-center relative">
-        <img
-          src={myPhoto}
-          alt="Photographer"
-          className="h-[80%] object-contain rounded-full -mt-20"
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 
-export default About;
+export default AboutMe;
